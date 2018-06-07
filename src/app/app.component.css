@@ -1,0 +1,26 @@
+.notes-container {
+  display: flex;
+  flex-flow: row wrap;
+}
+.notes {
+  display: flex;
+  flex-flow: row wrap;
+  max-width: 1000px;
+  margin: 0 auto;
+  justify-content: space-around;
+}
+.first-element {
+  flex: 0 0 25%;
+  min-width: 150px;
+}
+.second-element {
+  flex: 0 0 65%;
+  min-width: 350px;
+}
+.notes-head {
+  align-items: center;
+}
+.notes-body {
+  margin-top: 20px;
+  align-items: flex-start;
+}
