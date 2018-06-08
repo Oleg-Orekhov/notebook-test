@@ -7,4 +7,14 @@
   font-size: 14px;
   line-height: 30px;
   font-weight: bold;
+  cursor: pointer;
+}
+.add-button:hover {
+  border-color: red;
+}
+@media screen and (max-width: 550px) {
+  .add-button {
+    font-size: 10px;
+    line-height: 25px;
+  }
 }

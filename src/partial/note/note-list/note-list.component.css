@@ -18,6 +18,8 @@ ul {
 }
 @media screen and (max-width: 550px) {
   ul {
-    margin: 0 auto 20px;
+    margin: 0 auto;
+    max-height: 150px;
+    overflow: auto;
   }
 }

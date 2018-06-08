@@ -1,5 +1,6 @@
 import {EventEmitter, Injectable} from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { Note } from './Note';
 
 @Injectable()
 export class NotesService {
@@ -25,13 +26,13 @@ export class NotesService {
   addNote() {
     const notes = this.notes.slice();
     const currId = Math.floor(Math.random() * 1000);
-    const newNote = {
+    const newNote = new Note({
       'caption' : 'New Caption',
       'text': '',
       'keywords': '',
       'date': '',
       'id': currId
-    };
+    });
     notes.push(newNote);
     this.updateNotes.emit(notes);
     this.updateCurrentNotes.emit(notes);
@@ -41,14 +42,12 @@ export class NotesService {
   saveNote(note) {
     let index;
     const notes = this.notes.slice();
-    console.log(note);
     notes.find((elm, elmIndex) => {
       if (elm.id === note.id) {
         index = elmIndex;
         return true;
       }
     });
-    console.log(notes);
     notes[index] = note;
     this.updateNotes.emit(notes);
     this.updateCurrentNotes.emit(notes);

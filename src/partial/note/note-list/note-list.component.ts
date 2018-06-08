@@ -1,12 +1,12 @@
-import { Component, OnInit } from '@angular/core';
-import { NotesService } from '../services/notes.service';
+import { Component } from '@angular/core';
+import { NotesService } from '../../../services/notes.service';
 
 @Component({
   selector: 'app-note-list',
   templateUrl: './note-list.component.html',
   styleUrls: ['./note-list.component.css']
 })
-export class NoteListComponent implements OnInit {
+export class NoteListComponent {
   notes = [];
   activeNote;
   constructor(private notesService: NotesService) {
@@ -17,8 +17,4 @@ export class NoteListComponent implements OnInit {
       this.activeNote = this.notes.indexOf(res);
     });
   }
-
-  ngOnInit() {
-  }
-
 }
