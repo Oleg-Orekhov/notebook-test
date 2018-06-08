@@ -19,7 +19,6 @@ export class NoteLayoutComponent implements OnInit {
 
   ngOnInit() {
     this.notesService.updateNote.subscribe(res => {
-      // this.form.reset();
       this.note = JSON.parse(JSON.stringify(res)); // deep copy
       console.log(this.note);
       if (Array.isArray(this.note.keywords)) {
@@ -33,7 +32,7 @@ export class NoteLayoutComponent implements OnInit {
     if (this.form.invalid) {
       return;
     }
-    let note = JSON.parse(JSON.stringify(this.note));
+    const note = JSON.parse(JSON.stringify(this.note));
     if (this.note.keywords !== '') {
       let keywords: any = note.keywords.replace(/ /g,'');
       console.log(keywords);

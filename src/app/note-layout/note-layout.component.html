@@ -12,27 +12,3 @@
     <button class="button" (click)="deleteNote($event)">DELETE</button>
   </div>
 </form>
-<!--
-<form #form="ngForm" (ngSubmit)="addCreated(form)" class="form">
-  <div>
-    <label for="title"> Title </label>
-    <input id="title" type="text" name="name" [value]="currentNote.name" [(ngModel)]="currentNote.name" #title="ngModel" required>
-    <div class="alert" *ngIf="title.invalid && (title.dirty || title.touched)">Title is required</div>
-  </div>
-  <div>
-    <label for="text"> Text </label>
-    <textarea id="text" type="text" name="content" [value]="currentNote.content" [(ngModel)]="currentNote.content" #text="ngModel" required>
-    </textarea>
-    <div class="alert" *ngIf="text.invalid && (text.dirty || text.touched)">Text is required</div>
-  </div>
-  <select name="" id="" name="storage" [(ngModel)]="currentNote.storage" required>
-    <option [selected]="true" [value]="0">Local Storage</option>
-    <option [value]="1">Firebase</option>
-  </select>
-
-  <input type="submit">
-  <div class="links">
-    <a routerLink=''>Go back</a>
-  </div>
-</form>
--->

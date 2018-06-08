@@ -12,11 +12,9 @@ export class NoteListComponent implements OnInit {
   constructor(private notesService: NotesService) {
     this.notesService.updateCurrentNotes.subscribe(res => {
       this.notes = res;
-      console.log(res);
     });
     this.notesService.updateNote.subscribe(res => {
       this.activeNote = this.notes.indexOf(res);
-      console.log(this.activeNote);
     });
   }
 
